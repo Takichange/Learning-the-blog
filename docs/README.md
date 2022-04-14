@@ -64,7 +64,7 @@ npm install
 
 <!-- 静态图片引入 -->
 
-![VuePress Logo](/images/q.jpg)
+<!-- ![VuePress Logo](/images/q.jpg) -->
 
 ![33](@src/img/b.png)
 
