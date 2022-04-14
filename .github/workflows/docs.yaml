@@ -1,32 +1,31 @@
 name: Build and Deploy Github Pages
+
+# 触发条件：在 push 到 master 分支后
 on:
-  # 每当 push 到 main 分支时触发部署
   push:
-    branches: [main]
+    branches:
+      - master
 
-    steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v3
-
+# 任务
 jobs:
-  docs:
+  build-and-deploy:
+    # 服务器环境：最新版 Ubuntu
     runs-on: ubuntu-latest
-
-      steps:
+    steps:
       # 拉取代码
-      - name: Checkout 🛎️
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
-          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
-          fetch-depth: 0
+          persist-credentials: false
 
-      # 运行构建脚本
-      - name: Build VuePress site
-        run: yarn install && yarn docs:build
+      # 生成静态文件
+      - name: Build
+        run: npm install && npm run docs:build
 
-       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.3.0
+      # 部署到 GitHub Pages
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          branch: gh-pages 
-          folder: docs/.vuepress/dist
-          ssh-key: ${{ secrets.ACCESS_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: docs/.vuepress/dist
