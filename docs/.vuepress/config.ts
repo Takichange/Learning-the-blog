@@ -17,7 +17,11 @@ export default defineUserConfig<DefaultThemeOptions>({
             description: 'note',
         },
     },
-    base:'/Learning-the-blog/',
+    base: '/Learning-the-blog/',
+    // host: '127.0.0.1',
+    open: true,
+    // port:9999,
+    
     // 图片路劲别名
     alias: {
         '@src/img': path.resolve(__dirname, './Public/images/')
