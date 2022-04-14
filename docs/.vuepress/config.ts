@@ -17,8 +17,7 @@ export default defineUserConfig<DefaultThemeOptions>({
             description: 'note',
         },
     },
-
-    base: '/',
+    base:'/Learning-the-blog/',
     // 图片路劲别名
     alias: {
         '@src/img': path.resolve(__dirname, './Public/images/')
