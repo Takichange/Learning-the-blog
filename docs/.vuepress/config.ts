@@ -1,8 +1,9 @@
 import { defineUserConfig } from 'vuepress'
-import type { DefaultThemeOptions } from 'vuepress'
+import type { ViteBundlerOptions } from '@vuepress/bundler-vite'
+import type { DefaultThemeOptions } from '@vuepress/theme-default'
 import path from 'path'
 
-export default defineUserConfig<DefaultThemeOptions>({
+export default defineUserConfig<DefaultThemeOptions,ViteBundlerOptions>({
     //站点配置
     locales: {
 
@@ -26,6 +27,8 @@ export default defineUserConfig<DefaultThemeOptions>({
     alias: {
         '@src/img': path.resolve(__dirname, './Public/images/')
     },
+    // 指定 vuepress build 命令的输出目录
+    dest:path.resolve(__dirname,'../../dist'),
 
     markdown: {
         // 默认行号显示

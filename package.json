@@ -3,7 +3,7 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "start": "vite preview",
-    "dev": "vite"
+    "dev": "vite dev docs"
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "^2.0.0-beta.39",
