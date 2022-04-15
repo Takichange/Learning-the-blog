@@ -1,1 +1,0 @@
-const e={key:"v-2b50ac68",path:"/foo.html",title:"",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1649950819e3,contributors:[{name:"Your Name",email:"you@example.com",commits:1}]},filePathRelative:"foo.md"};export{e as data};

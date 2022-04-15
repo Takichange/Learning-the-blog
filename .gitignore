@@ -9,6 +9,6 @@ yarn.lock
 .vscode
 
 # vuepress
-docs/.vuepress/dist
+dist
 docs/.vuepress/.temp
 docs/.vuepress/.cache

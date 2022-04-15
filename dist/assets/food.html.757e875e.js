@@ -1,1 +1,0 @@
-const e={key:"v-410285c8",path:"/nested/food.html",title:"",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1649950819e3,contributors:[{name:"Your Name",email:"you@example.com",commits:1}]},filePathRelative:"nested/food.md"};export{e as data};
