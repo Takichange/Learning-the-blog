@@ -18,7 +18,7 @@ export default defineUserConfig<DefaultThemeOptions,ViteBundlerOptions>({
             description: 'note',
         },
     },
-    base: '/Learning-the-blog/',
+    // base: '/',
     // host: '127.0.0.1',
     open: true,
     // port:9999,
